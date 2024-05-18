@@ -23,7 +23,7 @@ Not only would it be useful for threat intellegence it would also allow me to im
 I'm running [tpot](https://github.com/telekom-security/tpotce) on a Debian 12 16GB RAM / 6vCPU core cloud server fully segregated from my core infrastructure. Installation was fairly simple, it was a matter of running a single script which can be found [here](https://github.com/telekom-security/tpotce/blob/master/install.sh), then reboot the system. 
 
 Once the system is back online the admin panel will be accessible on port 64297 and SSH connections on port 64295. Do note that once the system is back online it may take a while for all the docker containers to load, once it does load it should look like the below when running `sudo docker ps`:
-![alt text](/misc/image1.png)
+![alt text](/misc/image-1.png)
 
 ## Shodan:
 
