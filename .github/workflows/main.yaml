@@ -1,0 +1,34 @@
+name: Malicious IP Aggregator
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '5 4 * * *'
+
+jobs:
+  Job:
+    runs-on: self-hosted
+    timeout-minutes: 5
+    permissions:
+      contents: write
+
+    steps:
+
+    - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.head_ref }}
+    
+    - name: Execute IP Aggregator Script
+      run: |
+        bash ~/ip-aggrigator.sh >> ~/agg-ips.txt
+
+    - name: Remove dupes
+      run: |
+        sort ~/agg-ips.txt | uniq -d > ~/deduped-ips.txt
+        sed '/^### Aggregating top 500 source IPs in ES$/,/^### Elasticsearch is available, now continuing./d' ~/deduped-ips.txt > /home/runner/runner/_work/honeypot/honeypot/malicious-ips.txt
+        cat /home/runner/runner/_work/honeypot/honeypot/malicious-ips.txt | wc -l
+
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: Auto update malicious IP file
