@@ -25,8 +25,8 @@ jobs:
     - name: Remove dupes
       run: |
         sort ~/agg-ips.txt | uniq -d > ~/deduped-ips.txt
-        sed '/^### Aggregating top 500 source IPs in ES$/,/^### Elasticsearch is available, now continuing./d' ~/deduped-ips.txt >> /home/runner/runner/_work/honeypot/honeypot/malicious-ips.txt
-        cat /home/runner/runner/_work/honeypot/honeypot/malicious-ips.txt | wc -l
+        sed '/^### Aggregating top 500 source IPs in ES$/,/^### Elasticsearch is available, now continuing./d' ~/deduped-ips.txt >> /home/test/runner/_work/honeypot/honeypot/malicious-ips.txt
+        cat /home/test/runner/_work/honeypot/honeypot/malicious-ips.txt | wc -l
 
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v5
