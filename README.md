@@ -4,6 +4,8 @@
 
 A honeypot is a computer system or network that is intentionally left vulnerable to hackers in order to detect, analyse, and respond to potential security threats. The goal of a honeypot is to gather information about the tactics, techniques, and procedures used by bad actors, which can help improve overall network security.
 
+![alt text](/misc/honeypot.png)
+
 ## Benefits
 
 - Improved threat intelligence: Honeypots provide valuable insights into attacker tactics, techniques, and procedures (TTPs), helping security teams improve their defenses.
@@ -39,7 +41,7 @@ Once the system is back online the admin panel will be accessible on port 64297 
 
 # Logs
 
-The logs can be fetched from the tpotce/data folder, 
+The logs can be fetched from the tpotce/data folder.
 
 # Malicious IPs Aggregator
 
