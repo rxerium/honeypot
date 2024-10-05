@@ -4,7 +4,7 @@
 
 A honeypot is a computer system or network that is intentionally left vulnerable to hackers in order to detect, analyse, and respond to potential security threats. The goal of a honeypot is to gather information about the tactics, techniques, and procedures used by bad actors, which can help improve overall network security.
 
-![alt text](/misc/honeypot.png)
+![alt text](/misc/honeypot-dalle.png)
 
 ## Benefits
 
@@ -56,3 +56,7 @@ If for whatever reason you'd like to detect tpot honeypots I've created a detect
 1. Download Nuclei from [here](https://github.com/projectdiscovery/nuclei)
 2. Copy the template to your local system
 3. Run the following command: `nuclei -u https://host.com -t honeypot-detection.yaml` 
+
+# Contact
+
+If you have any questions feel free to reach out to me on [Signal](https://signal.me/#eu/0Qd68U1ivXNdWCF4hf70UYFo7tB0w-GQqFpYcyV6-yr4exn2SclB6bFeP7wTAxQw) or via email: rishi@rxerium.com.
